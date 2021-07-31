@@ -1,0 +1,40 @@
+{% extends "pages/base.html" %}
+
+{% block title %}Đăng ĐK-HBT{% endblock %}
+
+{% block headbox %}
+    <div class="dkhbt-title">Đồng Khánh - Hai Bà Trưng</div>{% endblock %}
+
+{% block content %}
+    {% if user.username %}
+        <div class="container-fluid">
+        <div class="container-content up-content">
+            <center>
+                <form action="." method="POST">
+
+                    {% csrf_token %}
+
+                    <div class="field-up-title">
+                        <div class="field-up-value"><label for="title">Nhan đề</label></div>
+                        <input type="text" class="field-up-box-title" id="title" name="title" placeholder="" required>
+                    </div>
+
+                    <div class="field-up-essay">
+                        <div class="field-up-value"><label for="body">Bài viết</label></div>
+                        <textarea class="field-up-box-essay" placeholder="Để ẩn danh, khi đặt tên tài khoản là tên thật của bạn rồi thì không cần ghi tên tác giả ở cuối bài nữa hế. Nhưng nếu bạn muốn ghi thì mình cũng không cản." id="body" name="body"  required ></textarea>
+                    </div>
+
+                    <input type="hidden" name="next" value="{% url 'mydkhbt' %}"/>
+
+                    <button type="submit" class="updkhbtbtn">Đăng bài</button>
+
+                </form>
+            </center>
+        </div>
+    </div>
+    {% else %}
+        <div class="container-fluid">
+            <div class="container-title developing-title"> Ôi, đăng nhập đã nhé...</br> </div>
+        </div>
+    {% endif %}
+{% endblock %}

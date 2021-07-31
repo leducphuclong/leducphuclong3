@@ -1,0 +1,29 @@
+{% extends "pages/base.html" %}
+
+{% block title %}My ĐK-HBT{% endblock %}
+
+{% block headbox %}<div class="dkhbt-title">Đồng Khánh - Hai Bà Trưng</div>{% endblock %}
+
+{% block content %}
+    <div class="container-fluid container-dkhbt">
+        <div class="dkhbt-content">
+            <button type="button" class="mydkhbt-updkhbtbtn" onclick="location.href='{% url 'updkhbt' %}';">Gửi bài</button>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col" class="dkhbt-th dkhbt-th-title">Nhan đề bài viết</th>
+                        <th scope="col" class="dkhbt-th dkhbt-th-date">Ngày gửi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for post in Posts %}
+                        <tr>
+                            <td class="dkhbt-td dkhbt-td-title"><a href="/mydkhbt/{{ post.id }}" class="dkhbt-td-title-link"><div class="dkhbt-td-title-text">{{ post.title }}</div></a></td>
+                            <td class="dkhbt-td dkhbt-td-date">{{ post.date|date:"d-m-y" }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

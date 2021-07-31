@@ -1,0 +1,11 @@
+{% extends "pages/base.html" %}
+
+{% block title %} Oh sh*t !! {% endblock %}
+
+{% block headbox %} Error {% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="container-title error-content">{{ message }}</div>
+    </div>
+{% endblock %}

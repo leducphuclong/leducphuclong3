@@ -1,0 +1,19 @@
+{% extends "pages/base.html" %}
+
+{% block title %}Đăng ký{% endblock %}
+
+{% block headbox %} Log up {% endblock %}
+
+{% block content %}
+     <div class="container-fluid">
+        {% if user.username %}
+            <div class="container-title afterreg-title">Đăng ký thành công !!!</br> Giờ hãy làm bất cứ gì bạn muốn ở đây:</div>
+            <div class="updkhbt-content afterreg-content">
+                <button type="button" class="optionbtn1" onclick="quay_lai_trang_truoc2()">Tiếp tục ở trang trước</button>
+                <button type="button" class="optionbtn2" onclick="location.href='/';">Về trang chủ</button>
+            </div>
+        {% else %}
+            <div class="container-title afterreg-title">Đăng ký thành công !!!</br> Hãy đăng nhập để tiếp tục gửi bài, bình luận,...</div>
+        {% endif %}
+    </div>
+{% endblock %}

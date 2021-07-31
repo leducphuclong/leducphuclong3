@@ -1,0 +1,754 @@
+{% load static %}
+@font-face{
+    src:url("/static/font/VNF-Comic_Sans.ttf");
+    font-family: Comic Sans MS Vie;
+}
+
+@font-face{
+    src:url("/static/font/UniSansHeavy.ttf");
+    font-family: Uni Sans Heavy;
+}
+
+@font-face{
+    src:url("/static/font/UniSansThin.ttf");
+    font-family: Uni Sans Thin;
+}
+
+html, body {
+    height: 100%;
+    background-color: #f6f6f6;
+}
+
+.image{
+    width: 200px;
+    height: 200px;
+    margin: 1% 2% 0 0;
+    padding: 0 0 0 0;
+}
+
+.mytitle{
+    text-align: center;
+    padding: 4.1% 0 4.1% 0%;
+    margin: 1.4% 0 0 0;
+    font-size: 110%;
+    background-color: #e3e7fa;
+    width: 430px;
+}
+
+.imagelist{
+    width: 70px;
+    height: 70px;
+}
+
+.dkhbt-title{
+    padding: 4.1% 0 5.1% 0;
+    font-size: 50%;
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+.dkhbt-content{
+    margin: 0;
+    padding: 3% 0 0 0;
+}
+
+.dkhbt-date{
+    text-align: right;
+    font-size: 70%;
+    padding-right: 30%;
+}
+
+.dkhbt-th{
+    text-align: center;
+    font-size: 100%
+}
+
+.dkhbt-th-title{
+    width: 80%;
+}
+
+.dkhbt-th-date{
+    min-width: 20%;
+}
+
+.dkhbt-td{
+    font-size: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.dkhbt-td-title{
+    border-right: 1px solid black;
+    max-width: 80%;
+}
+
+.dkhbt-td-title-text{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: Ellipsis;
+    position: absolute;
+    width: 75%;
+    padding: 0 0 0 0;
+    margin: 0 3.5% 0 1.5%;
+    font-family: Comic Sans MS Vie;
+}
+
+.dkhbt-td-title-text:hover{
+    overflow: visible;
+    width: 105%;
+    left: 0;
+    text-align: left;
+    background: white;
+    padding: 0 0 0 1%;
+    margin: 0 0 0 0;
+}
+
+.dkhbt-td-title-link{
+    color: #28304d;
+    text-decoration: none;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+.dkhbt-td-title-link:hover{
+    color: #28304d;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+.dkhbt-td-date{
+    width: 20%;
+}
+
+.dkhbt-post-content{
+    font-family: 'Lora', serif;
+    text-indent: 10%;
+}
+
+.dropdown-group{
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    width: fit-content;
+    z-index: 1;
+    top: 22.5%;
+    background: none;
+}
+
+.twolog{
+    margin: 1.2% 0 0 0;
+    padding: 2% 2%;
+}
+
+.butlog{
+    width: 100%;
+    height: 100%;
+    padding: 2% 0 2% 0;
+    margin: 1% 0 1% 0;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 10%;
+    background-color: #dcf7e4;
+    border: none;
+    font-size: 125%;
+    font-family: "Courier New";
+    font-weight: normal;
+    font-style: oblique;
+}
+
+.butlog:hover{
+    background-color: #45827a;
+}
+
+.butlist{
+    height: 100%;
+    width: 100%;
+    margin: 0 0 0 50%;
+    padding: 10% 110% 10% 8%;
+    border: none;
+    background: none;
+    border-radius: 25%;
+    z-index: 1;
+}
+
+.butlist:hover{
+    background-color: #e3e7fa;
+}
+
+.dropdown-menu{
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    width: 100%;
+    background: white;
+}
+
+.dropdown-menu a{
+    padding: 0;
+    margin: 2% 5% 4% 5%;
+    text-decoration: none;
+    text-align: center;
+    font-size: 100%;
+    color: #2196F3;
+    display: block;
+    line-height: 180%;
+    width: 90%;
+    border-radius: 30%;
+    background-color: #f6f6f6;
+    border: 3px outset white;
+}
+
+.dropdown-menu li{
+    border: 3px outset white;
+}
+
+.container-fluid{
+    margin: 4% 0% 0% 0%;
+    padding: 1% 0 0 0;
+    min-height: 80%;
+}
+
+.container-title{
+    font-size: 125%;
+    font-family: Comic Sans MS Vie;
+    text-align: center;
+    margin: 0;
+    padding: 0 9% 0 0;
+}
+
+.container-content{
+    margin: 2% 28% 0 26%;
+    padding: 0 0 0 0;
+}
+
+.container-footer{
+    float: right;
+    text-align: center;
+    margin: 0% 2% 0% 0%;
+    padding: 0 0 1.5% 0;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.link{
+    color: #28304d;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.link-email{
+    word-break: break-all;
+}
+
+p{
+    line-height: 170%;
+    padding: 1.5% 0 1.5% 0;
+    margin: 0;
+}
+
+.error-content{
+    margin: 0 auto;
+    padding: 1%;
+}
+
+.register-content{
+    text-align: center;
+    padding-bottom: 10%;
+}
+
+.signupbtn{
+    background-color: #04AA6D;
+    color: white;
+    padding: 1%;
+    margin-top: 1%;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.signupbtn:hover {
+  opacity:1;
+}
+
+.field{
+    width: 100%;
+}
+
+.field-value{
+    width: 42%;
+    font-weight: bold;
+    float: left;
+    padding: 0 0 0 5%;
+    text-align: left;
+    font-size: 95%;
+}
+
+.field-box-signup{
+    width: 60%;
+    padding: 0;
+    margin: 0;
+    border: 3px double darkgreen;
+}
+
+.field-box-login{
+    width: 60%;
+    padding: 0;
+    margin: 0;
+    border: 3px double darkblue;
+}
+
+.loginbtn{
+    background-color: #5048f7;
+    color: white;
+    padding: 1%;
+    margin-top: 2%;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.loginbtn:hover{
+    opacity:1;
+}
+
+.up-content{
+    margin: 2% 28% 0 19%;
+    padding-bottom: 10%;
+}
+
+.field-up-title{
+    padding-bottom: 5%;
+}
+
+.field-up-essay{
+    padding-bottom: 5%;
+}
+
+.field-up-value{
+    font-weight: bold;
+    font-size: 90%;
+    padding: 1%;
+    border-radius: 50px;
+    background: #f5b3ec;
+}
+
+.field-up-box-title{
+    width: 100%;
+    border: none;
+    height: 50px;
+    font-size: 80%;
+    padding: 2%;
+}
+
+.field-up-box-essay{
+    width: 100%;
+    height: 500px;
+    border: none;
+    font-size: 80%;
+    padding: 2%;
+}
+
+.field-up-box-essay::placeholder{
+
+}
+
+.updkhbtbtn{
+    background-color: #b31e4b;
+    color: white;
+    padding: 1%;
+    margin-top: 2%;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.updkhbtbtn:hover{
+    opacity:1;
+}
+
+.developing-title{
+    font-family: Uni Sans Thin;
+    font-weight: bolder;
+    font-size: 170%;
+    padding-left: 2%;
+}
+
+.mydkhbt-updkhbtbtn{
+    color: white;
+    background-color: #b31e4b;
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+    opacity: 0.9;
+    height: fit-content;
+    border-radius: 35px;
+    text-align: center;
+    float: left;
+    padding: 0 4% 0 4%;
+    margin: 0 0 2% 0;
+}
+
+.mydkhbt-updkhbtbtn:hover{
+    opacity:1;
+}
+
+.field-comment-value{
+    font-weight: bold;
+    font-size: 100%;
+    padding: 0.3%;
+    border-radius: 50px;
+    background: #f5b3ec;
+    margin: 0;
+    text-align: center;
+}
+
+.field-comment-box{
+    width: 100%;
+    height: 200px;
+    border: none;
+    font-size: 85%;
+    margin: 0;
+    padding: 2%;
+}
+
+.field-comment-box::placeholder{
+    text-align: center;
+    padding-top: 3%;
+    font-size: 120%;
+}
+
+.field-comment-footer{
+    padding-bottom: 10%;
+}
+
+.commentdkhbtbtn{
+    background-color: #b31e4b;
+    color: white;
+    padding: 0.5%;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.commentdkhbtbtn:hover{
+    opacity: 1;
+}
+
+.comment{
+    background: white;
+    margin: 2% 0 2% 0;
+}
+
+.comment-author{
+    font-family: "Courier New";
+    font-weight: bolder;
+    font-size: 120%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.comment-date{
+    font-size: 70%;
+    text-align: right;
+    font-weight: lighter;
+    margin-right: 20%;
+}
+
+.comment-body{
+    text-align: left;
+    padding: 0 12% 0 14%;
+    font-size: 85%;
+    text-indent: 5%;
+}
+
+.updkhbt-content{
+    text-align: center;
+    padding: 0 9% 0 0;
+    margin: 0;
+}
+
+.optionbtn1{
+    background-color: #b31e4b;
+    color: white;
+    padding: 0.2%;
+    margin: 1%;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    opacity: 0.9;
+    font-size: 120%;
+}
+
+.optionbtn1:hover{
+    opacity: 1;
+}
+
+.optionbtn2{
+    background-color: #5048f7;
+    color: white;
+    padding: 0.2%;
+    margin: 1%;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    opacity: 0.9;
+    font-size: 120%;
+}
+
+.optionbtn2:hover{
+    opacity: 1;
+}
+
+.afterreg-content{
+    padding-top: 5%;
+}
+
+.afterreg-title{
+    font-family: Uni Sans Thin;
+    font-weight: bolder;
+    font-size: 170%;
+}
+
+/*Ipad ngang(1024 x 768)*/
+@media screen and (max-width: 1024px){
+    .twolog{
+        padding: 0 0;
+        margin: 0 0 0 1%;
+        font-size: 70%;
+    }
+
+    .dropdown-group{
+        top: 4.5%;
+        left: 1%;
+    }
+
+    .container-fluid{
+        padding: 1% 0 0 0;
+    }
+}
+
+/*Ipad dọc(768 x 1024)*/
+@media screen and (max-width: 768px){
+    .twolog{
+        padding: 0 0;
+        margin: 0 0 0 1%;
+        font-size: 70%;
+    }
+
+    .image{
+        width: 100%;
+        height: 100%;
+        margin: 0% 0% 0.5% 0%;
+    }
+
+    .butlog {
+        padding: 0% 0 1% 0;
+    }
+
+    .mytitle{
+        padding: 3% 0 2% 0%;
+        margin: 1.2% 0 1.2% 20%;
+        width: 350px;
+    }
+
+    .container-fluid{
+        margin: 10% 0 0 3%;
+    }
+
+    .container-content{
+        margin: 6% 20% 0 15%;
+    }
+
+    .dropdown-group{
+        top: 17%;
+        left: 4%;
+    }
+}
+
+/*Tablet nhỏ(480 x 640)*/
+@media screen and (max-width: 480px){
+
+    .updkhbt-content{
+        padding-right: 4%;
+    }
+
+    .optionbtn2{
+        width: 90%;
+    }
+
+    .optionbtn1{
+        width: 90%;
+    }
+
+    .mydkhbt-updkhbtbtn{
+        margin: 0 0 4% 0;
+    }
+
+    .image{
+        width: 100%;
+        height: 100%;
+        margin: 0% 0% 0.5% 0%;
+    }
+
+    .mytitle{
+        padding: 3% 0% 2% 0%;
+        margin: 1.2% 0 2.5% 0;
+        width: 430px;
+    }
+
+    .twolog{
+        padding: 0% 20%;
+        margin: 0 0 0 0;
+    }
+
+    .butlog {
+        padding: 1% 0 1% 0;
+    }
+
+    .imagelist{
+        width: 40px;
+        height: 40px;
+    }
+
+    .butlist{
+        margin: 5% 0 0 0;
+        padding: 5% 110% 15% 8%;
+    }
+
+    .dropdown-group{
+        top: 0%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .dropdown-menu{
+        border: none;
+        background: none;
+    }
+
+    .dropdown-menu a{
+        border: 3px outset white;
+        margin: 0% 5% 0% 4%;
+        padding: 1% 0 1% 0;
+    }
+
+    .dropdown-menu li{
+        border: 3px outset white;
+        width: 80%;
+        background: white;
+        margin: 0 0 0 0;
+        padding: 0.5% 0 1% 0;
+    }
+
+    .first-li{
+        border-radius: 10% 10% 0 0;
+    }
+
+    .last-li{
+        border-radius: 0 0 10% 10%;
+    }
+
+    .container-fluid{
+        margin: 14% 2% 0% 2%;
+    }
+
+    .container-dkhbt{
+        margin: 14% 0% 0% 0%;
+    }
+
+    .container-title{
+        font-size: 115%;
+        padding-right: 5%;
+    }
+
+    .dkhbt-date{
+        text-align: right;
+        font-size: 70%;
+        padding-right: 15%;
+    }
+
+    .container-content{
+        font-size: 80%;
+        margin: 3% 12% 0 5%;
+        text-align: center;
+    }
+
+    .container-footer{
+        font-size: 80%;
+        padding-bottom: 4%;
+    }
+
+    p{
+        line-height: 130%;
+        padding: 3% 0 3% 0;
+        margin: 0;
+    }
+
+    .dkhbt-th{
+        font-size: 75%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .dkhbt-th-title{
+        max-width: 45%;
+    }
+
+    .dkhbt-th-date{
+        min-width: 55%;
+    }
+
+    .dkhbt-td{
+        font-size: 75%;
+    }
+
+    .dkhbt-td-title{
+        max-width: 45%;
+    }
+
+    .dkhbt-td-date{
+        min-width: 55%;
+    }
+
+    .dkhbt-td-title-text{
+        padding: 0 12% 0 0;
+        margin: 0 0 0 0;
+    }
+
+    .field-value{
+        width:100%;
+        font-weight: bold;
+        text-align: center;
+        font-size: 90%;
+    }
+
+    .field-box-signup{
+        width: 100%;
+    }
+
+    .register-note{
+        font-size: 70%;
+    }
+
+    .field-box-login{
+        width: 100%;
+    }
+
+    .developing-title{
+        font-size: 100%;
+    }
+}
+
+/*Iphone(480 x 640)*/
+@media screen and (max-width: 320px){
+}
+
+/*Smart phone nhỏ*/
+@media screen and (max-width: 240px){
+}
+
+

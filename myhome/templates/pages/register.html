@@ -1,0 +1,31 @@
+{% extends "pages/base.html" %}
+
+{% block title %}Đăng ký{% endblock %}
+
+{% block headbox %} Log up {% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="container-content register-content">
+            <p class="register-note">note: Nếu là A1 thì điền tên thật vào "Tên tài khoản" để bạn biết nớ là ai hế. Ví dụ: phuclong</p>
+            </br>
+            <form method="post">
+                {% csrf_token %}
+                {% for field in form %}
+                    <p>
+                        <div class="field">
+                            <span class="field-value">{{ field.label_tag }}</span>  <span class="field-box-signup">{{ field }}</span>
+                        </div>
+                        {% if field.help_text %}
+                            <small>{{ field.help_text }}</small>
+                        {% endif %}
+                        {% for error in field.errors %}
+                            <p style="color: red">{{ error }}</p>
+                        {% endfor %}
+                    </p>
+                {% endfor %}
+                <button type="submit" class="signupbtn">Đăng Ký</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

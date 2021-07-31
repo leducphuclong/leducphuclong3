@@ -1,0 +1,15 @@
+{% extends "pages/base.html" %}
+
+{% block title %}Đăng nhập{% endblock %}
+
+{% block headbox %} Log in {% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="container-title afterreg-title">Đăng nhập thành công !!!</br> Giờ hãy làm bất cứ gì bạn muốn ở đây:</div>
+        <div class="updkhbt-content afterreg-content">
+            <button type="button" class="optionbtn1" onclick="quay_lai_trang_truoc()">Tiếp tục ở trang trước</button>
+                <button type="button" class="optionbtn2" onclick="location.href='/';">Về trang chủ</button>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "pages/base.html" %}
+
+{% block title %} Đăng nhập {% endblock %}
+
+{% block headbox %} Log in {% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="container-content register-content">
+            <center>
+                <p class="register-note">note: Nếu chưa có tài khoản, nhấn vào nút "Đăng ký" phía trên để tạo tài khoản.</p>
+                </br>
+                <form method="POST">
+                    {% csrf_token %}
+                    {% for key, value in form.errors.items %}
+                        {{ value }}
+                    {%  endfor %}
+                    <p>
+                        <div class="field">
+                            <span class="field-value">Tên tài khoản:</span> <span class="field-box-login">{{ form.username }}</span>
+                        </div>
+                    </p>
+                    <p>
+                        <div class="field">
+                            <span class="field-value">Mật khẩu:</span> <span class="field-box-login">{{ form.password }}</span>
+                        </div>
+                    </p>
+                    <input type="hidden" name="next" value="{% url 'afterlogin' %}"/>
+                    <button type="submit" class="loginbtn">Đăng Nhập</button>
+                </form>
+            </center>
+        </div>
+    </div>
+{% endblock %}
+

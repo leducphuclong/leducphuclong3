@@ -1,0 +1,39 @@
+{% extends "pages/base.html" %}
+
+{% block title %}{{post.title}}{% endblock %}
+
+{% block headbox %}<div class="dkhbt-title">Đồng Khánh - Hai Bà Trưng</div>{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="container-title">{{ post.title }}</div>
+        <div class="dkhbt-date">{{ post.date }}</div>
+        <div class="container-content dkhbt-post-content">{{ post.body|safe|linebreaks }}</div>
+    </div>
+
+    <div class="field-comment-value"><label for="body">Bình luận</label></div>
+
+    {% for comment in post.comments.all %}
+        <div class="comment">
+            <div class="comment-body">{{comment.body|linebreaks}}</div>
+            <div class="comment-date">{{comment.date}}</div>
+            <div class="comment-author"><strong>{{comment.author}}</strong></div>
+        </div>
+    {% endfor %}
+        <div class="comment">
+            <div class="comment-author">
+                Đăng nhập để viết bình luận của bạn...
+            </div>
+        </div>
+
+    {% if user.username %}
+        <form action="/mydkhbt/{{ post.id }}/" method="POST">
+            {% csrf_token %}
+            <textarea class="field-comment-box" placeholder="Bình luận của bạn..." id="body" name="body"  required ></textarea>
+            <input type="hidden" name="next" value="/mydkhbt/{{ post.id }}/" style="margin: 0; padding: 0"/>
+            <button type="submit" class="commentdkhbtbtn">Đăng</button>
+        </form>
+    {% endif %}
+
+    <div class="field-comment-footer"></div>
+{% endblock %}
